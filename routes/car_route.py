@@ -30,7 +30,7 @@ def calc_car_tax():
     horse_power = data['to_hp_car']
 
     if code in tax_param_dict:
-        tax = rate * int(horse_power)
+        tax = rate * horse_power
         return {'message': 'Результат расчета налога: '}, tax, 200
     else:
         message = {'message': 'Error calculation tax'}
